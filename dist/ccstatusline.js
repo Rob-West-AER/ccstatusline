@@ -68632,7 +68632,7 @@ class ContextLimitBarWidget {
     return true;
   }
 }
-var import_react35, jsx_dev_runtime9, DEFAULT_CONTEXT_LIMIT = 130000, PREVIEW_USED_TOKENS = 50000, ContextLimitEditor = ({ widget, onComplete, onCancel }) => {
+var import_react35, jsx_dev_runtime9, DEFAULT_CONTEXT_LIMIT = 150000, PREVIEW_USED_TOKENS = 50000, ContextLimitEditor = ({ widget, onComplete, onCancel }) => {
   const [text, setText] = import_react35.useState(widget.metadata?.limit ?? "");
   const parsed = parseLimit(text);
   const hasInput = text.trim().length > 0;
@@ -68657,7 +68657,7 @@ var import_react35, jsx_dev_runtime9, DEFAULT_CONTEXT_LIMIT = 130000, PREVIEW_US
       setText((prev) => prev + input);
     }
   });
-  const hint = isValid ? `= ${formatTokens(parsed, 0)} tokens` : hasInput ? "Invalid value" : "Digits with an optional k/m suffix (e.g. 130000 or 130k)";
+  const hint = isValid ? `= ${formatTokens(parsed, 0)} tokens` : hasInput ? "Invalid value" : "Digits with an optional k/m suffix (e.g. 150000 or 150k)";
   return /* @__PURE__ */ jsx_dev_runtime9.jsxDEV(Box_default, {
     flexDirection: "column",
     children: [

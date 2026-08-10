@@ -23,7 +23,7 @@ import { makeSliderBar } from './shared/usage-display';
 
 type DisplayMode = 'progress' | 'progress-short' | 'slider' | 'slider-only';
 
-const DEFAULT_CONTEXT_LIMIT = 130000;
+const DEFAULT_CONTEXT_LIMIT = 150000;
 const PREVIEW_USED_TOKENS = 50000;
 
 function getDisplayMode(item: WidgetItem): DisplayMode {
@@ -39,8 +39,8 @@ function isBarSliderMode(mode: DisplayMode): boolean {
 }
 
 /**
- * Parse a user-entered token limit. Accepts a plain integer (e.g. "130000")
- * or a value with a k/m suffix (e.g. "130k", "1.5m"). Returns null when the
+ * Parse a user-entered token limit. Accepts a plain integer (e.g. "150000")
+ * or a value with a k/m suffix (e.g. "150k", "1.5m"). Returns null when the
  * input is empty or not a positive number.
  */
 function parseLimit(raw: string | undefined): number | null {
@@ -201,7 +201,7 @@ const ContextLimitEditor: React.FC<WidgetEditorProps> = ({ widget, onComplete, o
         ? `= ${formatTokens(parsed, 0)} tokens`
         : hasInput
             ? 'Invalid value'
-            : 'Digits with an optional k/m suffix (e.g. 130000 or 130k)';
+            : 'Digits with an optional k/m suffix (e.g. 150000 or 150k)';
 
     return (
         <Box flexDirection='column'>
